@@ -22,6 +22,7 @@ public class GalloCampero extends Gallo{
     }
     public String resistir(){
         int nueva=getEnergia()+ 15;
+        if(nueva > 120)nueva=120;// correccion, tope de energia
         setEnergia(nueva);
         return getNombre()+" aguanta y se repone! Energia: "+getEnergia();
     }
